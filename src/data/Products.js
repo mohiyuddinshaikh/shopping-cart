@@ -20,7 +20,7 @@ import Image19 from "../assets/images/shoes/nineteen.jpg";
 import Image20 from "../assets/images/shoes/twenty.jpg";
 
 export const products = [
-  { id: 1, name: "Nike Air Max", price: 2999, image: Image1 },
+  { id: 1, name: "Nike Air Max", price: 2999, image: Image18 },
   { id: 2, name: "Puma RS-X", price: 3499, image: Image2 },
   { id: 3, name: "Adidas Ultraboost", price: 3799, image: Image3 },
   { id: 4, name: "Nike Revolution 5", price: 2199, image: Image4 },

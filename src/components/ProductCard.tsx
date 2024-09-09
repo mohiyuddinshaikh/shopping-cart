@@ -1,4 +1,5 @@
-import React from "react";
+import { Card } from "antd";
+import "../styles/ProductCard.scss";
 
 type Product = {
   id: number;
@@ -14,8 +15,16 @@ type Props = {
 export default function ProductCard({ product }: Props) {
   const { id, name, price, image } = product;
   return (
-    <div>
-      {id} - {name} - {price} - <img src={image} height={100} width={100} />
-    </div>
+    <Card
+      hoverable
+      style={{ width: 240 }}
+      cover={<img alt="example" src={image} height={320} />}
+      className="productCard"
+    >
+      <div className="cardBody">
+        <div className="name">{name}</div>
+        <div className="price">₹ {price}</div>
+      </div>
+    </Card>
   );
 }
