@@ -1,7 +1,8 @@
 import { Card } from "antd";
 import "../styles/ProductCard.scss";
+import AddToCartButton from "./AddToCartButton";
 
-type Product = {
+export type Product = {
   id: number;
   name: string;
   price: number;
@@ -24,6 +25,7 @@ export default function ProductCard({ product }: Props) {
       <div className="cardBody">
         <div className="name">{name}</div>
         <div className="price">₹ {price}</div>
+        <AddToCartButton />
       </div>
     </Card>
   );
