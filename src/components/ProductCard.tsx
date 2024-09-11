@@ -25,7 +25,7 @@ export default function ProductCard({ product }: Props) {
       <div className="cardBody">
         <div className="name">{name}</div>
         <div className="price">₹ {price}</div>
-        <AddToCartButton />
+        <AddToCartButton product={product} />
       </div>
     </Card>
   );
