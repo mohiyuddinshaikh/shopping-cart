@@ -4,4 +4,37 @@
   font-size: 14px;
   width: 100%;
   margin: 10px 0;
+  padding: 10px 0;
+}
+
+.quantityButton {
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .subtract,
+  .add,
+  .display {
+    padding: 10px 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    flex: 1;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+  }
+
+  .subtract,
+  .add {
+    background-color: #081d30;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
 }

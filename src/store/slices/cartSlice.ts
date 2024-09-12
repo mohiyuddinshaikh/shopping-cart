@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Product } from "../../components/ProductCard";
 import { RootState } from "..";
 
-interface CartItem {
+export interface CartItem {
   product: Product;
   quantity: number;
 }
@@ -31,10 +31,20 @@ export const cartSlice = createSlice({
         state.items.push({ product, quantity: 1 });
       }
     },
-    removeProductFromCart: (state, action: PayloadAction<number>) => {
-      state.items = state.items.filter(
-        (item) => item.quantity !== action.payload
+    removeProductFromCart: (state, action: PayloadAction<Product>) => {
+      const product = action.payload;
+      const existingItemIndex = state.items.findIndex(
+        (item) => item.product.id === product.id
       );
+
+      if (existingItemIndex >= 0) {
+        const existingItem = state.items[existingItemIndex];
+        if (existingItem.quantity > 1) {
+          existingItem.quantity -= 1;
+        } else {
+          state.items.splice(existingItemIndex, 1);
+        }
+      }
     },
   },
 });
