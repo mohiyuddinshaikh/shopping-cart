@@ -1,7 +1,7 @@
 .headerContainer {
   background: #081d30;
   color: white;
-  padding: 0 40px;
+  padding: 0 80px;
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -10,6 +10,10 @@
   position: sticky;
   top: 0;
   z-index: 9;
+
+  .logo {
+    cursor: pointer;
+  }
 
   .cartIconContainer {
     position: relative;
