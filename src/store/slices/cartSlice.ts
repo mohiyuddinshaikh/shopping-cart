@@ -46,6 +46,16 @@ export const cartSlice = createSlice({
         }
       }
     },
+    deleteProductFromCart: (state, action: PayloadAction<Product>) => {
+      const product = action.payload;
+      const existingItemIndex = state.items.findIndex(
+        (item) => item.product.id === product.id
+      );
+
+      if (existingItemIndex >= 0) {
+        state.items.splice(existingItemIndex, 1);
+      }
+    },
   },
 });
 
@@ -53,6 +63,10 @@ export const getUniqueProductCount = (state: RootState) => {
   return state.cart.items.length;
 };
 
-export const { addProductToCart, removeProductFromCart } = cartSlice.actions;
+export const {
+  addProductToCart,
+  removeProductFromCart,
+  deleteProductFromCart,
+} = cartSlice.actions;
 
 export default cartSlice.reducer;

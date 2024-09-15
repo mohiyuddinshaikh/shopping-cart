@@ -25,15 +25,20 @@
     .quantity {
       color: gray;
       font-weight: 500;
+      display: flex;
+      flex-direction: column;
+
+      .quantityWrap {
+        width: 150px;
+      }
     }
   }
   .price {
     color: gray;
     font-weight: bolder;
-    // flex: 1;
   }
   .close {
-    // flex: 1;
     margin-top: 2px;
+    cursor: pointer;
   }
 }

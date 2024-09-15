@@ -1,12 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import "../styles/AddToCartButton.scss";
 import { Product } from "./ProductCard";
-import {
-  addProductToCart,
-  CartItem,
-  removeProductFromCart,
-} from "../store/slices/cartSlice";
+import { addProductToCart, CartItem } from "../store/slices/cartSlice";
 import { RootState } from "../store";
+import ProductQuantityControl from "./ProductQuantityControl";
 
 type Props = {
   product: Product;
@@ -15,35 +12,12 @@ type Props = {
 type AddButtonProps = {
   handleAddToCart: () => void;
 };
-type ProductQuantityControlProps = {
-  productData: CartItem;
-  handleAddToCart: () => void;
-  handleRemoveFromCart: () => void;
-};
 
 const AddButton = ({ handleAddToCart }: AddButtonProps) => {
   return (
     <button className="addToCart" onClick={handleAddToCart}>
       Add to Cart
     </button>
-  );
-};
-
-const ProductQuantityControl = ({
-  productData,
-  handleAddToCart,
-  handleRemoveFromCart,
-}: ProductQuantityControlProps) => {
-  return (
-    <div className="quantityButton">
-      <div className="subtract" onClick={handleRemoveFromCart}>
-        {"\u2212"}
-      </div>
-      <div className="display">{productData?.quantity}</div>
-      <div className="add" onClick={handleAddToCart}>
-        {"\u002B"}
-      </div>
-    </div>
   );
 };
 
@@ -61,16 +35,8 @@ export default function AddToCartButton({ product }: Props) {
     dispatch(addProductToCart(product));
   };
 
-  const handleRemoveFromCart = () => {
-    dispatch(removeProductFromCart(product));
-  };
-
   return productData?.quantity && productData?.quantity > 0 ? (
-    <ProductQuantityControl
-      productData={productData}
-      handleAddToCart={handleAddToCart}
-      handleRemoveFromCart={handleRemoveFromCart}
-    />
+    <ProductQuantityControl productData={productData} />
   ) : (
     <AddButton handleAddToCart={handleAddToCart} />
   );
