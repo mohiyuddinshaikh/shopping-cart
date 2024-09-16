@@ -14,7 +14,7 @@ type Props = {
 };
 
 export default function ProductCard({ product }: Props) {
-  const { id, name, price, image } = product;
+  const { name, price, image } = product;
   return (
     <Card
       hoverable

@@ -1,5 +1,6 @@
 // import Image1 from "../assets/images/shoes/one.jpg";
 import Image2 from "../assets/images/shoes/two.jpg";
+import { Product } from "../components/ProductCard";
 // import Image3 from "../assets/images/shoes/three.jpg";
 // import Image4 from "../assets/images/shoes/four.jpg";
 // import Image5 from "../assets/images/shoes/five.jpg";
@@ -19,7 +20,7 @@ import Image2 from "../assets/images/shoes/two.jpg";
 // import Image19 from "../assets/images/shoes/nineteen.jpg";
 // import Image20 from "../assets/images/shoes/twenty.jpg";
 
-export const products = [
+export const products: Product[] = [
   { id: 1, name: "Nike Air Max", price: 2999, image: Image2 },
   { id: 2, name: "Puma RS-X", price: 3499, image: Image2 },
   { id: 3, name: "Adidas Ultraboost", price: 3799, image: Image2 },
