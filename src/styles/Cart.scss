@@ -32,6 +32,32 @@
           margin-bottom: 7px;
         }
       }
+      .listing {
+        .noItems {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 50px;
+          gap: 10px;
+          .text {
+            font-size: 20px;
+            color: grey;
+            font-weight: bold;
+          }
+          .button {
+            background-color: #00008b;
+            color: white;
+            height: 30px;
+            width: fit-content;
+            font-size: 15px;
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            padding: 2px 10px;
+            cursor: pointer;
+          }
+        }
+      }
     }
 
     .summary {
@@ -57,11 +83,33 @@
 
         .subtotal,
         .shipping,
-        .discount {
+        .discount,
+        .totalWrap {
           display: flex;
           justify-content: space-between;
           font-weight: bold;
           color: rgb(73, 67, 67);
+        }
+
+        .totalWrap {
+          align-items: center;
+          margin-top: 20px;
+          .total {
+            display: flex;
+            flex-direction: column;
+            .value {
+              font-size: 28px;
+            }
+          }
+          .checkout {
+            height: 100%;
+            button {
+              background-color: #00008b;
+              color: white;
+              height: 85%;
+              cursor: pointer;
+            }
+          }
         }
       }
     }
