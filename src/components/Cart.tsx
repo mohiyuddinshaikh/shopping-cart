@@ -45,7 +45,7 @@ export default function Cart({}: Props) {
           <div className="listing">
             {cartItems?.length > 0 ? (
               cartItems.map((cartItem, index) => (
-                <CartListCard cartItem={cartItem} />
+                <CartListCard cartItem={cartItem} key={index} />
               ))
             ) : (
               <div className="noItems">

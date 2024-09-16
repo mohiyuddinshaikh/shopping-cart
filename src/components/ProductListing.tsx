@@ -11,7 +11,7 @@ export default function ProductListing({}: Props) {
       <Header />
       <div className="listWrapper">
         {products?.map((product, index) => (
-          <ProductCard product={product} />
+          <ProductCard product={product} key={index} />
         ))}
       </div>
     </div>
