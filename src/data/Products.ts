@@ -1,8 +1,8 @@
 // import Image1 from "../assets/images/shoes/one.jpg";
-import Image2 from "../assets/images/shoes/two.jpg";
 import { Product } from "../components/ProductCard";
+// import Image2 from "../assets/images/shoes/two.jpg";
 // import Image3 from "../assets/images/shoes/three.jpg";
-// import Image4 from "../assets/images/shoes/four.jpg";
+import Image4 from "../assets/images/shoes/four.jpg";
 // import Image5 from "../assets/images/shoes/five.jpg";
 // import Image6 from "../assets/images/shoes/six.jpg";
 // import Image7 from "../assets/images/shoes/seven.jpg";
@@ -21,26 +21,26 @@ import { Product } from "../components/ProductCard";
 // import Image20 from "../assets/images/shoes/twenty.jpg";
 
 export const products: Product[] = [
-  { id: 1, name: "Nike Air Max", price: 2999, image: Image2 },
-  { id: 2, name: "Puma RS-X", price: 3499, image: Image2 },
-  { id: 3, name: "Adidas Ultraboost", price: 3799, image: Image2 },
-  { id: 4, name: "Nike Revolution 5", price: 2199, image: Image2 },
-  { id: 5, name: "Puma Future Rider", price: 2699, image: Image2 },
-  { id: 6, name: "Adidas NMD", price: 3299, image: Image2 },
-  { id: 7, name: "Nike Free RN", price: 2099, image: Image2 },
-  { id: 8, name: "Puma Clyde", price: 1799, image: Image2 },
-  { id: 9, name: "Adidas Supernova", price: 2499, image: Image2 },
-  { id: 10, name: "Nike Air Force 1", price: 3599, image: Image2 },
-  { id: 11, name: "Puma Ignite", price: 2899, image: Image2 },
-  { id: 12, name: "Adidas Yeezy", price: 3899, image: Image2 },
-  { id: 13, name: "Nike SB Dunk", price: 2999, image: Image2 },
-  { id: 14, name: "Puma Speedcat", price: 2399, image: Image2 },
-  { id: 15, name: "Adidas Gazelle", price: 2299, image: Image2 },
-  { id: 16, name: "Nike Air Zoom", price: 3099, image: Image2 },
-  { id: 17, name: "Puma Suede Classic", price: 1999, image: Image2 },
-  { id: 18, name: "Adidas Stan Smith", price: 2499, image: Image2 },
-  { id: 19, name: "Nike Blazer Mid", price: 2599, image: Image2 },
-  { id: 20, name: "Puma Roma", price: 1799, image: Image2 },
+  { id: 1, name: "Nike Air Max", price: 2999, image: Image4 },
+  { id: 2, name: "Puma RS-X", price: 3499, image: Image4 },
+  { id: 3, name: "Adidas Ultraboost", price: 3799, image: Image4 },
+  { id: 4, name: "Nike Revolution 5", price: 2199, image: Image4 },
+  { id: 5, name: "Puma Future Rider", price: 2699, image: Image4 },
+  { id: 6, name: "Adidas NMD", price: 3299, image: Image4 },
+  { id: 7, name: "Nike Free RN", price: 2099, image: Image4 },
+  { id: 8, name: "Puma Clyde", price: 1799, image: Image4 },
+  { id: 9, name: "Adidas Supernova", price: 2499, image: Image4 },
+  { id: 10, name: "Nike Air Force 1", price: 3599, image: Image4 },
+  { id: 11, name: "Puma Ignite", price: 2899, image: Image4 },
+  { id: 12, name: "Adidas Yeezy", price: 3899, image: Image4 },
+  { id: 13, name: "Nike SB Dunk", price: 2999, image: Image4 },
+  { id: 14, name: "Puma Speedcat", price: 2399, image: Image4 },
+  { id: 15, name: "Adidas Gazelle", price: 2299, image: Image4 },
+  { id: 16, name: "Nike Air Zoom", price: 3099, image: Image4 },
+  { id: 17, name: "Puma Suede Classic", price: 1999, image: Image4 },
+  { id: 18, name: "Adidas Stan Smith", price: 2499, image: Image4 },
+  { id: 19, name: "Nike Blazer Mid", price: 2599, image: Image4 },
+  { id: 20, name: "Puma Roma", price: 1799, image: Image4 },
 ];
 
 // export const products = [

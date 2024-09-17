@@ -5,8 +5,9 @@
   flex-direction: column;
 
   .listWrapper {
-    width: 100%;
+    max-width: 90%;
     height: 100%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;

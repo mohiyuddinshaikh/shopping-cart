@@ -19,7 +19,7 @@ export default function ProductCard({ product }: Props) {
     <Card
       hoverable
       style={{ width: 240 }}
-      cover={<img alt="example" src={image} height={320} />}
+      cover={<img alt="example" src={image} height={320} loading="lazy" />}
       className="productCard"
     >
       <div className="cardBody">
