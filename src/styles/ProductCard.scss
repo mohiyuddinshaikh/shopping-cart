@@ -5,3 +5,19 @@
   flex: 1 1 18%;
   max-width: 18%;
 }
+
+.blur-load img {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.blur-load img.loaded {
+  opacity: 1;
+}
+
+.blur-load {
+  background-size: cover;
+  background-position: center;
+  height: 320px;
+  width: 240px;
+}
