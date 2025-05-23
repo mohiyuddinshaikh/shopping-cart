@@ -1,5 +1,10 @@
 .cartContainer {
-  background-color: #f5f5f5;
+  --bg-color: #f4f4f4;
+  --sidebar-bg-color: white;
+  --title-color: #00008b;
+  --breakdown-text-color: rgb(73, 67, 67);
+
+  background-color: var(--bg-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,11 +30,12 @@
 
         .title {
           font-size: 28px;
-          color: #00008b;
+          color: var(--title-color);
           font-weight: bold;
         }
         .items {
           margin-bottom: 7px;
+          color: grey;
         }
       }
       .listing {
@@ -65,7 +71,7 @@
       padding: 50px 30px;
       display: flex;
       flex-direction: column;
-      background-color: white;
+      background-color: var(--sidebar-bg-color);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
       .payment {
@@ -76,7 +82,7 @@
 
         .paymentTitle {
           font-size: 25px;
-          color: #00008b;
+          color: var(--title-color);
           font-weight: bold;
           margin-bottom: 20px;
         }
@@ -88,7 +94,7 @@
           display: flex;
           justify-content: space-between;
           font-weight: bold;
-          color: rgb(73, 67, 67);
+          color: var(--breakdown-text-color);
         }
 
         .totalWrap {
@@ -113,5 +119,18 @@
         }
       }
     }
+
+    .nosummary {
+      color: grey;
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .cartContainer {
+    --bg-color: #1c1c1e;
+    --sidebar-bg-color: #2a2a2e;
+    --title-color: white;
+    --breakdown-text-color: #a6a6b0;
   }
 }

@@ -7,11 +7,9 @@ import { RootState } from "../store";
 import { formatToIndianCurrency } from "../utilities/commonUtilities";
 import { useNavigate } from "react-router-dom";
 
-type Props = {};
-
 const DISCOUNT_PRICE = 500;
 
-export default function Cart({}: Props) {
+export default function Cart() {
   const navigate = useNavigate();
 
   const cartItems: CartItem[] = useSelector(
@@ -91,7 +89,7 @@ export default function Cart({}: Props) {
                 </div>
               </>
             ) : (
-              "No summary"
+              <div className="nosummary">No summary</div>
             )}
           </div>
         </div>
