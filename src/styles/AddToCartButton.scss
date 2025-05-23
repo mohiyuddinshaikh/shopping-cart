@@ -18,7 +18,8 @@
   .add,
   .display {
     padding: 10px 0;
-    border: 1px solid black;
+    border: 1px solid;
+    border-color: var(--border-color);
     border-radius: 5px;
     padding: 5px;
     flex: 1;
@@ -36,5 +37,11 @@
     font-weight: bold;
     display: flex;
     align-items: center;
+  }
+}
+
+[data-theme="dark"] {
+  .quantityButton {
+    --border-color: white;
   }
 }

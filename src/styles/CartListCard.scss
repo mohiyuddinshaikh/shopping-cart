@@ -1,7 +1,10 @@
 .cardListCard {
+  --card-bg: white;
+  --name: #494943;
+
   display: flex;
   width: 70%;
-  background-color: white;
+  background-color: var(--card-bg);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: 120px;
   padding: 20px;
@@ -22,6 +25,7 @@
     .name {
       font-size: 18px;
       font-weight: bold;
+      color: var(--name);
     }
     .quantity {
       color: gray;
@@ -41,5 +45,12 @@
   .close {
     margin-top: 2px;
     cursor: pointer;
+  }
+}
+
+[data-theme="dark"] {
+  .cardListCard {
+    --card-bg: #34343a;
+    --name: white;
   }
 }

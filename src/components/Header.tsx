@@ -4,6 +4,8 @@ import { getUniqueProductCount } from "../store/slices/cartSlice";
 import { useSelector } from "react-redux";
 import { RootState } from "../store/index";
 import { useNavigate } from "react-router-dom";
+import { useTheme } from "../contexts/ThemeContext";
+import { Switch, Tooltip } from "antd";
 
 type Props = {
   showCart?: boolean;
@@ -11,6 +13,9 @@ type Props = {
 
 export default function Header({ showCart = true }: Props) {
   const navigate = useNavigate();
+
+  const { theme, toggleTheme } = useTheme();
+  console.log("theme", theme);
 
   const numberOfProductsInCart = useSelector((state: RootState) =>
     getUniqueProductCount(state)
@@ -29,16 +34,28 @@ export default function Header({ showCart = true }: Props) {
       <div className="logo" onClick={handleLogoClick}>
         Moboots
       </div>
-      {showCart ? (
-        <div className="cartIconContainer" onClick={handleOpenCart}>
-          <img src={Cart} className="cart" />
-          {numberOfProductsInCart > 0 ? (
-            <div className="cartBadge">
-              <span className="badgeText">{numberOfProductsInCart}</span>
-            </div>
-          ) : null}
+      <div className="rightLinks">
+        {showCart ? (
+          <div className="cartIconContainer" onClick={handleOpenCart}>
+            <img src={Cart} className="cart" />
+            {numberOfProductsInCart > 0 ? (
+              <div className="cartBadge">
+                <span className="badgeText">{numberOfProductsInCart}</span>
+              </div>
+            ) : null}
+          </div>
+        ) : null}
+        <div className="themeToggler" onClick={toggleTheme}>
+          <Tooltip title="Toggle Theme">
+            <Switch
+              value={theme === "light"}
+              onChange={toggleTheme}
+              checkedChildren={"🌞"}
+              unCheckedChildren="🌙"
+            />
+          </Tooltip>
         </div>
-      ) : null}
+      </div>
     </div>
   );
 }

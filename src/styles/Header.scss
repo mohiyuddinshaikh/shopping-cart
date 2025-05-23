@@ -16,7 +16,14 @@
     font-weight: bold;
   }
 
+  .rightLinks {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
   .cartIconContainer {
+    display: flex;
     position: relative;
     cursor: pointer;
     .cart {

@@ -1,6 +1,8 @@
 .productCard {
+  --card-bg: white;
   .ant-card-body {
     padding: 10px 20px;
+    background-color: var(--card-bg);
   }
   flex: 1 1 18%;
   max-width: 18%;
@@ -20,4 +22,18 @@
   background-position: center;
   height: 320px;
   width: 240px;
+}
+
+[data-theme="dark"] {
+  .productCard {
+    --card-bg: #34343a;
+
+    .ant-card {
+      background-color: var(--card-bg);
+    }
+
+    .ant-card-body {
+      color: #f2f2f5;
+    }
+  }
 }
