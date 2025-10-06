@@ -3,9 +3,7 @@ import ProductCard from "./ProductCard";
 import "../styles/ProductListing.scss";
 import Header from "./Header";
 
-type Props = {};
-
-export default function ProductListing({}: Props) {
+export default function ProductListing() {
   return (
     <div className="listingContainer">
       <Header />

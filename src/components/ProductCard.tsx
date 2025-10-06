@@ -17,7 +17,7 @@ type Props = {
 export default function ProductCard({ product }: Props) {
   const { name, price, image } = product;
 
-  const backgroundImageUrl = "src/assets/images/shoes/four-small.jpg";
+  const backgroundImageUrl = "src/assets/images/shoes/shoe-placeholder.jpg";
 
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
