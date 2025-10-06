@@ -1,5 +1,6 @@
 import { Card } from "antd";
 import "../styles/ProductCard.scss";
+import backgroundImage from "../../public/assets/images/shoes/shoe-placeholder.jpg";
 import AddToCartButton from "./AddToCartButton";
 import { useState } from "react";
 
@@ -17,8 +18,6 @@ type Props = {
 export default function ProductCard({ product }: Props) {
   const { name, price, image } = product;
 
-  const backgroundImageUrl = "src/assets/images/shoes/shoe-placeholder.jpg";
-
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
   return (
@@ -29,9 +28,7 @@ export default function ProductCard({ product }: Props) {
         <div
           className="blur-load"
           style={{
-            backgroundImage: isLoaded
-              ? undefined
-              : `url(${backgroundImageUrl})`,
+            backgroundImage: isLoaded ? undefined : `url(${backgroundImage})`,
           }}
         >
           <img
